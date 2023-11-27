@@ -1,0 +1,13 @@
+.button{
+    margin: 0 5px;
+    border-radius: 4px;
+    min-height: 44px;
+    padding: 5px 15px;
+    background-color: #39A2DB;
+    border: none;
+    color: #ffffff;
+}
+
+.disabled{
+    background-color: lightgray;
+}

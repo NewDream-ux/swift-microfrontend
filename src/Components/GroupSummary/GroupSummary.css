@@ -1,0 +1,18 @@
+.summaryLabel{
+    font-weight: 500;
+}
+
+.groupName{
+    width: 60%;
+    padding: 2px;
+}
+
+.rowContainer{
+    padding: 5px;
+}
+
+.summaryContainer{
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}

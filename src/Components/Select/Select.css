@@ -1,0 +1,11 @@
+.selectFields{
+    width: 25%;
+    float: left;
+    display: inline-block;
+    padding: 5px;
+    position:relative;
+}
+
+.selectAlign{
+    margin-top: 0px !important;
+}

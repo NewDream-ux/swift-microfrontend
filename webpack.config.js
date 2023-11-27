@@ -4,14 +4,15 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   mode: 'development',
+  target: 'web',
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://localhost:3001/",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
   devServer: {
-    port: 3000,
+    port: 3001,
     historyApiFallback: true,
   },
   module: {
@@ -34,6 +35,12 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      }
     ],
   },
   plugins: [ // This is important part
@@ -41,8 +48,7 @@ module.exports = {
       name: "SwiftPoc",
       filename: "remoteEntry.js",
       exposes: {
-        "./Button": "./src/Button",
-        "./Tab":"./src/ReactComponents/Tabs/Tab"
+        "./Tab":"./src/Components/Tabs/Tab"
       },
       shared: {
         react: {
@@ -58,6 +64,6 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: "./public/index.html",
-    }),
+    })
   ],
 };
