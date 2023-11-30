@@ -11441,7 +11441,7 @@
       "CONTRACT_TYPE_CODE": null
     }
   ],
-  "groupSummary":[
+  "groupSummary": [
     {
       "GROUP_ID": "39200300034",
       "CUSTOMER_STATUS_CODE": "A",
@@ -11476,7 +11476,7 @@
       "MID_CONTRACT_TOLERANCE_AMOUNT": null,
       "ORGANISATION_ID": 114083,
       "INT_ORG_UNIT_ID": 1,
-      "INT_ORG_UNIT_ID_TEXT" : "Company",
+      "INT_ORG_UNIT_ID_TEXT": "Company",
       "PRODUCT_DEFINITION_BASE_ID": 1,
       "UNDERWRITING_APPLIED_IND": true,
       "UNDERWRITING_APPLIED_DATE": "/Date(1177974000000)/",
@@ -11500,8 +11500,8 @@
       "GROUP_SERVICE_LOCATION_CODE": "OEU",
       "CLAIM_RATING_IND": null,
       "BESPOKE_GROUP_IND": false,
-      "CONTRACT_TYPE_CODE_Text":"GroupPay",
-      "FUNDING_METHOD_TEXT":"FundedBy_Employe"
+      "CONTRACT_TYPE_CODE_Text": "GroupPay",
+      "FUNDING_METHOD_TEXT": "FundedBy_Employe"
     },
     {
       "GROUP_ID": "55312177948",
@@ -11841,7 +11841,7 @@
       "MID_CONTRACT_TOLERANCE_AMOUNT": null,
       "ORGANISATION_ID": 189986,
       "INT_ORG_UNIT_ID": 1,
-      "INT_ORG_UNIT_ID_TEXT" : "Company",
+      "INT_ORG_UNIT_ID_TEXT": "Company",
       "PRODUCT_DEFINITION_BASE_ID": 1,
       "UNDERWRITING_APPLIED_IND": false,
       "UNDERWRITING_APPLIED_DATE": null,
@@ -11865,10 +11865,62 @@
       "GROUP_SERVICE_LOCATION_CODE": "OEU",
       "CLAIM_RATING_IND": null,
       "BESPOKE_GROUP_IND": false,
-      "CONTRACT_TYPE_CODE_Text":"GroupPay",
-      "FUNDING_METHOD_TEXT":"FundedBy_Employe"
+      "CONTRACT_TYPE_CODE_Text": "GroupPay",
+      "FUNDING_METHOD_TEXT": "FundedBy_Employe"
+    }
+  ],
+  "groupViewDetails": [
+    {
+      "DATA_ID":"0",
+      "COL_ID": "170576",
+      "COL_NAME": "Regent Electrical Distributors",
+      "COL_PARENT_ID": null,
+      "COL_STATUS": null,
+      "COL_EFFDATE": null,
+      "MEMBER_COUNT": 0,
+      "REGISTRATION_COUNT": 0,
+      "COL_INT_ORG_UNIT_ID": null,
+      "COL_PROD_DEF_BASE_ID": null,
+      "GROUP_LEVEL": "O",
+      "COL_FUTURE_STATUS": null,
+      "COL_FUTURE_STATUS_EFF_DATE": null,
+      "COL_HIERARCHY_LEVEL": 0,
+      "Child": [
+        {
+          "DATA_ID":"01",
+          "COL_ID": "55312445504",
+          "COL_NAME": "(C.C)Regent Electrical Distributors",
+          "COL_PARENT_ID": "170576",
+          "COL_STATUS": "A",
+          "COL_EFFDATE": "\/Date(846806400000)\/",
+          "MEMBER_COUNT": 0,
+          "REGISTRATION_COUNT": 0,
+          "COL_INT_ORG_UNIT_ID": "1",
+          "COL_PROD_DEF_BASE_ID": "1",
+          "GROUP_LEVEL": "P",
+          "COL_FUTURE_STATUS": "A",
+          "COL_FUTURE_STATUS_EFF_DATE": "\/Date(846806400000)\/",
+          "COL_HIERARCHY_LEVEL": 0,
+          "Child": [
+            {
+              "DATA_ID":"011",
+              "COL_ID": "27152557020",
+              "COL_NAME": "Regent Electrical Distributors",
+              "COL_PARENT_ID": "55312445504",
+              "COL_STATUS": "A",
+              "COL_EFFDATE": "\/Date(846806400000)\/",
+              "MEMBER_COUNT": 14,
+              "REGISTRATION_COUNT": 7,
+              "COL_INT_ORG_UNIT_ID": "1",
+              "COL_PROD_DEF_BASE_ID": "1",
+              "GROUP_LEVEL": "G",
+              "COL_FUTURE_STATUS": "A",
+              "COL_FUTURE_STATUS_EFF_DATE": "\/Date(846806400000)\/",
+              "COL_HIERARCHY_LEVEL": 0
+            }
+          ]
+        }
+      ]
     }
   ]
-
-  
 }

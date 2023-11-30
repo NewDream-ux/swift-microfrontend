@@ -5,9 +5,13 @@ const AppConfig = {
   endPoints: {
     companyUrl: `${ApiBaseUrl}/searchDetail`,
     groupSummary: `${ApiBaseUrl}/groupSummary`,
+    groupView: `${ApiBaseUrl}/groupViewDetails`,
   },
   constantItems: {
-    continueButton: `Continue`
+    continueButton: `Continue`,
+    groupView:`Group View`,
+    groupHierarchyView:`Group Hierarchy View`,
+    homeImageAlt:`Home_Image`
   }
 };
  

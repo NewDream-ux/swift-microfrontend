@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useFetcher, useNavigate } from 'react-router-dom';
-import './Table.css';
+import style from './Table.module.css';
 import DataTable from 'react-data-table-component';
 import { columns } from "../../Contents/SearchFormFieldJson";
 import { getTableData } from "../CommonFunction/CommonFunction";

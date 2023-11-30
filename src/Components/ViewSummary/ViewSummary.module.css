@@ -1,5 +1,5 @@
 .Accordians {
-    height: 252px;
+    height: 223px;
     padding: 10px;
   }
   
@@ -33,4 +33,15 @@
   .hiddenCheckbox{
     opacity: 0;
     position: absolute;
+  }
+
+  hr{
+    margin-top: 5px !important;
+    margin-bottom: 1px !important;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .view{
+    margin-left: 5px;
   }

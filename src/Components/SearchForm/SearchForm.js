@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './SearchForm.css';
+import style from './SearchForm.module.css';
 import { useForm } from 'react-hook-form';
 import { SearchFormFields } from "../../Contents/SearchFormFieldJson";
 import FormBuilder from "../FormBuilder/FormBuilder";
@@ -8,17 +8,24 @@ import axios from 'axios';
 import AppConfig from "../../../app.config";
 import ViewSummary from "../ViewSummary/ViewSummary";
 const SearchForm = (props) => {
-  const { companyUrl } = AppConfig.endPoints;
+  const {container, formStyle, buttonAlign} = style;
+  const {constantItems} = AppConfig;
+  const { companyUrl, groupView } = AppConfig.endPoints;
   const { tableVisible, searchedData } = props;
   const { fields } = SearchFormFields;
   const { register, handleSubmit, reset, setFocus, formState: { errors } } = useForm({ mode: 'onTouched' });
+  const [groupViewDetails, setGroupViewDetails] = useState([]);
 
   const onSubmit = (dataItem) => {
     const { address, customerBook, level, name, number, postcode, status } = dataItem;
-    console.log("level", level)
-    const url = `${companyUrl}?GROUPID_like=${number}&GROUPNAME_like=${name}&FORMATTEDADDRESS_like=${address}&POSTCODE_like=${postcode}&CONTRACT_TYPE_CODE_like=${level}&GROUP_STATUS_like=${status}&INTORGUNITID_like=${customerBook}`
+    const url = `${companyUrl}?GROUPID_like=${number}&GROUPNAME_like=${name}&FORMATTEDADDRESS_like=${address}&POSTCODE_like=${postcode}&CONTRACT_TYPE_CODE_like=${level}&GROUP_STATUS_like=${status}&INTORGUNITID_like=${customerBook}`; // url for data table
+
+    const groupViewUrl = `${groupView}`; // url for data table
     axios.get(url).then((response) => {
-      searchedData(response.data);
+      searchedData(response.data)
+    });
+    axios.get(groupViewUrl).then((response) => {
+      setGroupViewDetails(response.data)
     });
     tableVisible(true);
   }
@@ -39,10 +46,9 @@ const SearchForm = (props) => {
 
   
   return (
-    // <div className="container formContainer">
-    <div className="row container">
+    <div className={`row container ${container}`}>
       <div className="col-lg-9">
-        <div className="formStyle">
+        <div className={formStyle}>
         <form onSubmit={handleSubmit(onSubmit)}>
           {fields.map((item) => {
             const { type, label, classFromProps, validationMsg, regex, regexErrorMessage, option, targetElement } = item;
@@ -63,7 +69,7 @@ const SearchForm = (props) => {
               />
             )
           })}
-          <div className="buttonAlign">
+          <div className={buttonAlign}>
             <Button type="submit" value="Find Now" />
             <Button type="button" value="New Search" onclick={resetForm} />
             <Button type="button" value="Show Products" isDisable={true} />
@@ -73,7 +79,7 @@ const SearchForm = (props) => {
       </div>
 
       <div className="col-lg-3">
-       <ViewSummary  summaryIdentifier="search"/>
+       <ViewSummary  summaryIdentifier="search" viewLabel = {constantItems.groupView} groupViewDetails={groupViewDetails}/>
       </div>
 
     </div>

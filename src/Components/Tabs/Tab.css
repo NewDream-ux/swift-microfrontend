@@ -28,6 +28,7 @@
     }
   }
   ul.nav li {
+    border-radius: 2rem;
     height: 48px;
     color: #000000;
     width: 50%;
@@ -45,7 +46,7 @@
     border-radius: 2rem;
   }
   ul.nav li:nth-child(2) {
-    border-radius: 0;
+    border-radius: 2rem;
     border-bottom-right-radius: 2rem;
     border-top-right-radius: 2rem;
   }

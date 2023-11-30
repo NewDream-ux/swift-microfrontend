@@ -1,16 +1,17 @@
 import React from "react";
 import bupaLogoFooter from "../../assets/icons/bupaLogo.jpg";
-import './Footer.css';
+import style from './Footer.module.css';
 
 
 const Footer = () => {
+    const {footer, logo, footerElements} = style;
     return (
         <>
-            <div className="footer">
+            <div className={footer}>
                 <div>
-                    <img className="logo" src={bupaLogoFooter} alt="" />
+                    <img className={logo} src={bupaLogoFooter} alt="" />
                 </div>
-                <div className="footer-elements">
+                <div className={footerElements}>
                     <ul>
                         <li>Careers | </li>
                         <li>Privacy and Cookies | </li>
