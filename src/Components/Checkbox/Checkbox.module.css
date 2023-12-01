@@ -1,0 +1,34 @@
+.checkFields{
+    width: 25%;
+    float: left;
+    display: inline-block;
+    padding: 5px;
+    position:relative;
+}
+
+.checkAlign{
+    margin-top: 0px !important;
+}
+
+.summaryStyle{
+    margin-top: -10px;
+    width: 25%;
+    float: left;
+    display: flex;
+    padding: 5px;
+    position:relative;
+}
+
+.details{
+    margin-top: -10px;
+    width: 80%;
+    float: left;
+    display: flex;
+    padding: 5px;
+    position:relative;
+}
+
+.spanStyle{
+    font-size: 15px;
+    margin-left: 5px;
+}

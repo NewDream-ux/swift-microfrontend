@@ -5,9 +5,13 @@
 }
 
 .generalText{
+    font-size: 18px;
+    color: #39A2DB;
+    margin-bottom: 22px;
     font-weight: 500;
-    font-size: 1.25rem;
-    color: #212529;
+}
+.detailContent{
+    margin-top: 15px;
 }
 
 .detailContent span{
@@ -25,11 +29,11 @@
     height: 20px;
 }
 
-.detailLeftsection{
-    border: 1px solid lightgray;
-    margin: 10px 0 0 0px !important;
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
-    padding: 10px;
+.verticalLine{
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
 }

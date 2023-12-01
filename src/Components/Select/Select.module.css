@@ -6,6 +6,50 @@
     position:relative;
 }
 
-.selectAlign{
+
+.summaryStyle{
+    margin-top: -10px;
+    width: 25%;
+    float: left;
+    display: flex;
+    padding: 5px;
+    position:relative;
+}
+
+.details{
+    margin-top: -10px;
+    width: 65%;
+    float: left;
+    display: flex;
+    padding: 5px;
+    position:relative;
+}
+
+.summaryStyle .selectAlign{
+    width: 113%;
+    height: 30px !important;
+}
+
+.details .selectAlign{
+    width: 113%;
+    height: 30px !important;
+}
+
+.summaryStyle .styleLabel{
+    font-size: 15px;
+    width: 100%;
+}
+
+.details .styleLabel{
+    font-size: 15px;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0px !important;
+}
+
+select{
     margin-top: 0px !important;
 }

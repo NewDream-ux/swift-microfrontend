@@ -1,6 +1,7 @@
 import React from "react";
 import GroupSummary from "../../Components/GroupSummary/GroupSummary";
 import Tab from "../../Components/Tabs/Tab";
+import './GroupSummary.css';
 
 const GroupRecords=()=>{
   const tabTittle = {
@@ -18,7 +19,7 @@ const GroupRecords=()=>{
     return(
         <>
         <div className="row">
-         <div className="col-lg-12">
+         <div className="col-lg-12 handleSummaryContent">
          <GroupSummary />
          </div>
         </div>

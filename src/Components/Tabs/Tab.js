@@ -11,13 +11,12 @@ const Tab = (props) => {
   const [activeTab, setActiveTab] = useState(defaultActive);
   return (
     <>
-    {tabIdentifier == "summary" ? <hr /> : null}
     <div className="Tabs">
       <ul className={`nav ${tabIdentifier == "summary" ? `summaryTab` : ``}`}>
         {tabData.map((item) => {
           const { name, activeIdentifier } = item;
           return (
-            <li className={activeTab === activeIdentifier ? "active" : ""} onClick={() => setActiveTab(activeIdentifier)}><strong>{name}</strong></li>
+            <li className={activeTab === activeIdentifier ? "active" : ""} onClick={() => setActiveTab(activeIdentifier)}>{name}</li>
           )
         })}
       </ul>

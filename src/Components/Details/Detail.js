@@ -4,44 +4,59 @@ import Datepicker from "../DatePicker/DatePicker";
 import ViewSummary from "../ViewSummary/ViewSummary";
 import AppConfig from "../../../app.config";
 import axios from 'axios';
+import { GeneralDetails } from "../../Contents/SearchFormFieldJson";
+import FormBuilder from "../FormBuilder/FormBuilder";
+import { useForm } from 'react-hook-form';
+
 
 const Details = () => {
-    const {detailContainer, generalText, detailContent, detailLeftsection} = style;
-    const {constantItems} = AppConfig;
+    const { detailContainer, generalText, detailContent, detailLeftsection, verticalLine } = style;
+    const { constantItems } = AppConfig;
     const { groupView } = AppConfig.endPoints;
     const [groupViewDetails, setGroupViewDetails] = useState([]);
+    const { fields } = GeneralDetails;
+    const { register, setValue, handleSubmit, reset, setFocus, formState: { errors } } = useForm({ mode: 'onTouched' });
 
-    useEffect(()=>{
+
+    useEffect(() => {
         const groupViewUrl = `${groupView}`; // url for data table
         axios.get(groupViewUrl).then((response) => {
             setGroupViewDetails(response.data)
-          });
+        });
     }, [])
     return (
         <>
             <div className={detailContainer}>
                 <span className={generalText}>General</span>
                 <div className="row">
-                    <div className={`col-lg-6 ${detailContent}`} >
-                        <div className={`row ${detailLeftsection}`}>
-                            <div className="col-lg-6">
-                                <span><strong>Organization : </strong>ACCA</span>
-                                <span><strong>Creation Date : </strong>18/12/2013</span>
-                                <span><strong>Formation Date : </strong>05/01/2014</span>
-                                <span><strong>3rd Party Number : </strong>767653456</span>
-                                <span><input type="checkbox" />  Underwriting Applied</span>
-                                <Datepicker />
-                            </div>
-                            <div className="col-lg-6">
-                                <span><input type="checkbox" />  Show Group Name On Member Documents</span>
-                                <span><input type="checkbox" />  Bespoke Filfilment</span>
-                                <span><input type="checkbox" />  Bespoke Renewal Letter</span>
-                            </div>
-                        </div>
+                    <div className={`col-lg-5 ${detailContent}`} >
+                        {fields.map((item) => {
+                            const { type, label, classFromProps, validationMsg, regex, regexErrorMessage, option, targetElement, disable } = item;
+
+                            return (
+                                <FormBuilder
+                                    type={type}
+                                    label={label}
+                                    register={register}
+                                    errors={errors}
+                                    classFromProps={classFromProps}
+                                    required={validationMsg}
+                                    validationMsg={validationMsg}
+                                    regex={new RegExp(regex && regex, 'i')}
+                                    regexErrorMessage={regexErrorMessage}
+                                    option={option && option}
+                                    targetElement={targetElement}
+                                    componentIdentifier={"Details"}
+                                    disable={disable}
+                                />
+                            )
+                        })
+                        }
+                        {/* <div className={verticalLine}></div> */}
                     </div>
-                        <div className="col-lg-6">
-                             <ViewSummary summaryIdentifier="summary" viewLabel = {constantItems.groupHierarchyView} groupViewDetails={groupViewDetails}/>
-                        </div>
+                    <div className="col-lg-7">
+                        <ViewSummary summaryIdentifier="summary" viewLabel={constantItems.groupHierarchyView} groupViewDetails={groupViewDetails} />
+                    </div>
 
 
                 </div>

@@ -26,7 +26,7 @@
     overflow-y: scroll;
     background-color: #f2f2f2;
     &.summaryView{
-      width: 50%;
+      width: 80%;
     }
   }
 

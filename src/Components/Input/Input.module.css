@@ -17,3 +17,43 @@
 .inputAlign{
     margin-top: 0px !important;
 }
+
+.summaryStyle{
+    width: 25%;
+    display: flex;
+    padding: 5px;
+    position:relative;
+    margin-top: -10px;
+    float: left;
+}
+
+.details{
+    width: 80%;
+    display: flex;
+    padding: 5px;
+    position:relative;
+    margin-top: -10px;
+    float: left;
+}
+
+.summaryStyle .inputAlign{
+    width: 55%;
+    height: 30px;
+    float: right;
+}
+
+.details .inputAlign{
+    width: 55%;
+    height: 30px;
+    float: right;
+}
+
+.summaryStyle .styleLabel{
+    font-size: 15px;
+    width: 100%;
+}
+
+.details .styleLabel{
+    font-size: 15px;
+    width: 100%;
+}

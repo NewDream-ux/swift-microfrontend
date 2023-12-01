@@ -2,11 +2,11 @@ import React from "react";
 import style from './Select.module.css';
 
 const Select = (props) => {
-  const { selectFields, selectAlign } = style;
-  const { type, errors, label, register, option, targetElement, required } = props;
+  const { selectFields, selectAlign, summaryStyle, styleLabel } = style;
+  const { type, errors, label, register, option, targetElement, required, componentIdentifier, details } = props;
   return (
-    <div className={selectFields}>
-      <label style={{ color: "black" }}><strong>{label}</strong></label>
+    <div className={`${componentIdentifier == "GroupSummary" ? summaryStyle : componentIdentifier == "GroupSummary" ? details : selectFields}`}>
+      <label className={styleLabel} style={{ color: "black" }}>{label}</label>
       <select className={selectAlign} {...register(targetElement)}>
         <option></option>
         {option.map((item) => {
