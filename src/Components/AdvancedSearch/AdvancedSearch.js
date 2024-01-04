@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
-import style from './SearchForm.module.css';
+import style from './AdvancedSearch.module.css';
 import { useForm } from 'react-hook-form';
-import { SearchFormFields } from "../../Contents/SearchFormFieldJson";
+import { AdvancedSearchFormFields } from "../../Contents/SearchFormFieldJson";
 import FormBuilder from "../FormBuilder/FormBuilder";
 import Button from "../Button/Button";
 import axios from 'axios';
 import AppConfig from "../../../app.config";
 import ViewSummary from "../ViewSummary/ViewSummary";
-const SearchForm = (props) => {
+const AdvancedSearch = (props) => {
   const {container, formStyle, buttonAlign} = style;
   const {constantItems} = AppConfig;
-  const { companyUrl, groupView } = AppConfig.endPoints;
+  const { advanceSearchUrl, groupView } = AppConfig.endPoints;
   const { tableVisible, searchedData, tabNameIdentifier } = props;
-  const { fields } = SearchFormFields;
+  const { fields } = AdvancedSearchFormFields;
   const { register, handleSubmit, reset, setFocus, formState: { errors } } = useForm({ mode: 'onTouched' });
   const [groupViewDetails, setGroupViewDetails] = useState([]);
 
   const onSubmit = (dataItem) => {
-    const { address, customerBook, level, name, number, postcode, status } = dataItem;
-    const url = `${companyUrl}?GROUPID_like=${number}&GROUPNAME_like=${name}&FORMATTEDADDRESS_like=${address}&POSTCODE_like=${postcode}&CONTRACT_TYPE_CODE_like=${level}&GROUP_STATUS_like=${status}&INTORGUNITID_like=${customerBook}`; // url for data table
+    console.log("dataItem", dataItem);
+    const { excess, groupDiscount, paymentFreq, paymentType, productName, productType, renewalMonth, scale } = dataItem;
+    const url = `${advanceSearchUrl}?EXCESS_like=${excess}&GROUP_DISCOUNT_like=${groupDiscount}&Payment_Freq_like=${paymentFreq}&Payment_Type_like=${paymentType}&Product_Name_like=${productName}&Product_Type_like=${productType}&Renewal_Month_like=${renewalMonth}&Scale_like=${scale}`; // url for data table
 
     const groupViewUrl = `${groupView}`; // url for data table
     axios.get(url).then((response) => {
@@ -28,19 +29,21 @@ const SearchForm = (props) => {
       setGroupViewDetails(response.data)
     });
     tableVisible(true);
-    tabNameIdentifier("Search")
+    tabNameIdentifier("AdvancedSearch");
   }
+  
 
   const resetForm = () => {
     console.log("Alll");
     reset({
-      number: "",
-      name: "",
-      address: "",
-      postcode: "",
-      level: "",
-      status: "",
-      customerBook: ""
+      excess: "",
+      groupDiscount: "",
+      paymentFreq: "",
+      paymentType: "",
+      productName: "",
+      productType: "",
+      renewalMonth: "",
+      scale:""
     });
     window.scrollTo(0, 0);
   }
@@ -67,6 +70,7 @@ const SearchForm = (props) => {
                 regexErrorMessage={regexErrorMessage}
                 option={option && option}
                 targetElement={targetElement}
+                componentIdentifier={"advancedSearch"}
               />
             )
           })}
@@ -86,4 +90,4 @@ const SearchForm = (props) => {
     </div>
   );
 };
-export default SearchForm;
+export default AdvancedSearch;

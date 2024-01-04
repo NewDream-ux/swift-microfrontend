@@ -25,32 +25,17 @@ const ViewSummary = (props) => {
         <ul className="Accordians">
           {/* //First Menu With SubMenu */}
           {console.log("groupViewDetails", groupViewDetails)}
-          {groupViewDetails && groupViewDetails.map((item) => {
+
+          {groupViewDetails.map((item) => {
+            const { DATA_ID, COL_NAME, child } = item;
             return (
               <>
-                <input id={item.DATA_ID} className="hiddenCheckbox" type="checkbox" onChange={handleFirstCheck} /><label for="0"><strong> {item.COL_NAME}</strong></label>
-                <div id={item.DATA_ID} className="list">
-                  {console.log("mnnmnm", item.Child)}
-                  {item.Child && item.Child.map((item) => {
+                <input id={DATA_ID} className="hiddenCheckbox" type="checkbox" onChange={handleFirstCheck} /><label for={DATA_ID}><strong><i class="bi bi-circle-fill ulCircle"></i> {COL_NAME}</strong></label>
+                <div id={DATA_ID} className="list">
+                  {child.map((childItem) => {
+                    const { DATA_ID, COL_NAME } = childItem;
                     return (
-                      <>
-                        <input id={item.DATA_ID} className="hiddenCheckbox" type="checkbox" onChange={handleFirstCheck} /><label for="01"> {item.COL_NAME}</label>
-                        <div id={item.DATA_ID} className="list">
-                        {item.Child && item.Child.map((item) => {
-                    return (
-                      <>
-                        <input id={item.DATA_ID} className="hiddenCheckbox" type="checkbox" onChange={handleFirstCheck} /><label for="01"> {item.COL_NAME}</label>
-                        <div id={item.DATA_ID} className="list">
-                          {/* <li>SubAlok</li>
-              <li>SubSharma</li> */}
-                        </div>
-                      </>
-                    )
-                  })}
-                          {/* <li>SubAlok</li>
-              <li>SubSharma</li> */}
-                        </div>
-                      </>
+                      <li><i class="bi bi-circle-fill liCircle"></i> {COL_NAME}</li>
                     )
                   })}
                 </div>
@@ -58,7 +43,6 @@ const ViewSummary = (props) => {
             )
           })}
 
-          {/* //Second Menu */}
 
         </ul>
       </div>

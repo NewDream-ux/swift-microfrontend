@@ -11441,6 +11441,163 @@
       "CONTRACT_TYPE_CODE": null
     }
   ],
+
+
+  "advanceSearchDetail": [
+    {
+      "EXCESS": "Included",
+      "GROUP_DISCOUNT": "80%",
+      "Payment_Freq": "Annual",
+      "Payment_Type": "Direct Pay Common Renewal",
+      "Product_Name": "Silver",
+      "Product_Type": "BUPA Select",
+      "Renewal_Month": "January",
+      "Scale": "Countrywide"
+    },
+    {
+      "EXCESS": "No Excess",
+      "GROUP_DISCOUNT": "70%",
+      "Payment_Freq": "BiAnnual",
+      "Payment_Type": "Direct Pay Non Common Renewal",
+      "Product_Name": "Gold",
+      "Product_Type": "Cash Plan",
+      "Renewal_Month": "February",
+      "Scale": "Countrywide With London Upgrade"
+    },
+    {
+      "EXCESS": "£0",
+      "GROUP_DISCOUNT": "60%",
+      "Payment_Freq": "Quarterly",
+      "Payment_Type": "Group Pay",
+      "Product_Name": "Steel",
+      "Product_Type": "Dental",
+      "Renewal_Month": "March",
+      "Scale": "Countrywide with London Upgrade and Guided Care"
+    },
+    {
+      "EXCESS": "£1000",
+      "GROUP_DISCOUNT": "50%",
+      "Payment_Freq": "Monthly",
+      "Payment_Type": "Group Pay Non-Common Renewal",
+      "Product_Name": "Plant",
+      "Product_Type": "Travel",
+      "Renewal_Month": "April",
+      "Scale": "Extended"
+    },
+    {
+      "EXCESS": "£100",
+      "GROUP_DISCOUNT": "40%",
+      "Payment_Freq": "Annual",
+      "Payment_Type": "Subsidy",
+      "Product_Name": "Gold",
+      "Product_Type": "Welfare",
+      "Renewal_Month": "May",
+      "Scale": "Extended Choice"
+    },
+    {
+      "EXCESS": "Included",
+      "GROUP_DISCOUNT": "80%",
+      "Payment_Freq": "Annual",
+      "Payment_Type": "Direct Pay Common Renewal",
+      "Product_Name": "Silver",
+      "Product_Type": "BUPA Select",
+      "Renewal_Month": "January",
+      "Scale": "Countrywide"
+    },
+    {
+      "EXCESS": "No Excess",
+      "GROUP_DISCOUNT": "70%",
+      "Payment_Freq": "BiAnnual",
+      "Payment_Type": "Direct Pay Non Common Renewal",
+      "Product_Name": "Gold",
+      "Product_Type": "Cash Plan",
+      "Renewal_Month": "February",
+      "Scale": "Countrywide With London Upgrade"
+    },
+    {
+      "EXCESS": "£0",
+      "GROUP_DISCOUNT": "60%",
+      "Payment_Freq": "Quarterly",
+      "Payment_Type": "Group Pay",
+      "Product_Name": "Steel",
+      "Product_Type": "Dental",
+      "Renewal_Month": "March",
+      "Scale": "Countrywide with London Upgrade and Guided Care"
+    },
+    {
+      "EXCESS": "£1000",
+      "GROUP_DISCOUNT": "50%",
+      "Payment_Freq": "Monthly",
+      "Payment_Type": "Group Pay Non-Common Renewal",
+      "Product_Name": "Plant",
+      "Product_Type": "Travel",
+      "Renewal_Month": "April",
+      "Scale": "Extended"
+    },
+    {
+      "EXCESS": "£100",
+      "GROUP_DISCOUNT": "40%",
+      "Payment_Freq": "Annual",
+      "Payment_Type": "Subsidy",
+      "Product_Name": "Gold",
+      "Product_Type": "Welfare",
+      "Renewal_Month": "May",
+      "Scale": "Extended Choice"
+    },
+    {
+      "EXCESS": "Included",
+      "GROUP_DISCOUNT": "80%",
+      "Payment_Freq": "Annual",
+      "Payment_Type": "Direct Pay Common Renewal",
+      "Product_Name": "Silver",
+      "Product_Type": "BUPA Select",
+      "Renewal_Month": "January",
+      "Scale": "Countrywide"
+    },
+    {
+      "EXCESS": "No Excess",
+      "GROUP_DISCOUNT": "70%",
+      "Payment_Freq": "BiAnnual",
+      "Payment_Type": "Direct Pay Non Common Renewal",
+      "Product_Name": "Gold",
+      "Product_Type": "Cash Plan",
+      "Renewal_Month": "February",
+      "Scale": "Countrywide With London Upgrade"
+    },
+    {
+      "EXCESS": "£0",
+      "GROUP_DISCOUNT": "60%",
+      "Payment_Freq": "Quarterly",
+      "Payment_Type": "Group Pay",
+      "Product_Name": "Steel",
+      "Product_Type": "Dental",
+      "Renewal_Month": "March",
+      "Scale": "Countrywide with London Upgrade and Guided Care"
+    },
+    {
+      "EXCESS": "£1000",
+      "GROUP_DISCOUNT": "50%",
+      "Payment_Freq": "Monthly",
+      "Payment_Type": "Group Pay Non-Common Renewal",
+      "Product_Name": "Plant",
+      "Product_Type": "Travel",
+      "Renewal_Month": "April",
+      "Scale": "Extended"
+    },
+    {
+      "EXCESS": "£100",
+      "GROUP_DISCOUNT": "40%",
+      "Payment_Freq": "Annual",
+      "Payment_Type": "Subsidy",
+      "Product_Name": "Gold",
+      "Product_Type": "Welfare",
+      "Renewal_Month": "May",
+      "Scale": "Extended Choice"
+    }
+  ],
+
+
+
   "groupSummary": [
     {
       "GROUP_ID": "39200300034",
@@ -11869,9 +12026,97 @@
       "FUNDING_METHOD_TEXT": "FundedBy_Employe"
     }
   ],
+  "viewhierarchyDetails": [
+    {
+      "DATA_ID": "0",
+      "COL_NAME": "Regent Electrical Distributors",
+      "child": [
+        {
+          "DATA_ID": "01",
+          "COL_NAME": "(C.C)Regent Electrical Distributors",
+          "child": [
+            {
+              "DATA_ID": "011",
+              "COL_NAME": "Regent Electrical Distributors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "DATA_ID": "1",
+      "COL_NAME": "(C.C)Regent Electrical Distributors",
+      "child": [
+        {
+          "DATA_ID": "11",
+          "COL_NAME": "21 Colour Ltd"
+        }
+      ]
+    },
+    {
+      "DATA_ID": "2",
+      "COL_NAME": "Regent Electrical Distributors",
+      "child": [
+        {
+          "DATA_ID": "21",
+          "COL_NAME": "1 E Ltd"
+        }
+      ]
+    },
+    {
+      "DATA_ID": "3",
+      "COL_NAME": "iTRINEGY Limited",
+      "child": [
+        {
+          "DATA_ID": "31",
+          "COL_NAME": "iTRINEGY Limited"
+        }
+      ]
+    },
+    {
+      "DATA_ID": "4",
+      "COL_NAME": "New Business NCD",
+      "child": [
+        {
+          "DATA_ID": "41",
+          "COL_NAME": "New Business NCD Child"
+        }
+      ]
+    },
+    {
+      "DATA_ID": "5",
+      "COL_NAME": "BBY IntermediaryNew NCD",
+      "child": [
+        {
+          "DATA_ID": "51",
+          "COL_NAME": "BBY IntermediaryNew NCD Child"
+        }
+      ]
+    },
+    {
+      "DATA_ID": "6",
+      "COL_NAME": "BBY Direct 17.5% NCD",
+      "child": [
+        {
+          "DATA_ID": "61",
+          "COL_NAME": "BBY Direct 17.5% NCD Child"
+        }
+      ]
+    },
+    {
+      "DATA_ID": "7",
+      "COL_NAME": "BBY Direct New Business",
+      "child": [
+        {
+          "DATA_ID": "71",
+          "COL_NAME": "BBY Direct New Business Child"
+        }
+      ]
+    }
+  ],
   "groupViewDetails": [
     {
-      "DATA_ID":"0",
+      "DATA_ID": "0",
       "COL_ID": "170576",
       "COL_NAME": "Regent Electrical Distributors",
       "COL_PARENT_ID": null,
@@ -11887,7 +12132,7 @@
       "COL_HIERARCHY_LEVEL": 0,
       "Child": [
         {
-          "DATA_ID":"01",
+          "DATA_ID": "01",
           "COL_ID": "55312445504",
           "COL_NAME": "(C.C)Regent Electrical Distributors",
           "COL_PARENT_ID": "170576",
@@ -11903,7 +12148,7 @@
           "COL_HIERARCHY_LEVEL": 0,
           "Child": [
             {
-              "DATA_ID":"011",
+              "DATA_ID": "011",
               "COL_ID": "27152557020",
               "COL_NAME": "Regent Electrical Distributors",
               "COL_PARENT_ID": "55312445504",

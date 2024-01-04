@@ -4,8 +4,9 @@ console.log("ApiBaseUrl", ApiBaseUrl);
 const AppConfig = {
   endPoints: {
     companyUrl: `${ApiBaseUrl}/searchDetail`,
+    advanceSearchUrl: `${ApiBaseUrl}/advanceSearchDetail`,
     groupSummary: `${ApiBaseUrl}/groupSummary`,
-    groupView: `${ApiBaseUrl}/groupViewDetails`,
+    groupView: `${ApiBaseUrl}/viewhierarchyDetails`,
   },
   constantItems: {
     continueButton: `Continue`,

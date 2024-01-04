@@ -2,10 +2,10 @@ import React from "react";
 import style from './Select.module.css';
 
 const Select = (props) => {
-  const { selectFields, selectAlign, summaryStyle, styleLabel } = style;
+  const { selectFields, selectAlign, summaryStyle, styleLabel, advanceInput } = style;
   const { type, errors, label, register, option, targetElement, required, componentIdentifier, details } = props;
   return (
-    <div className={`${componentIdentifier == "GroupSummary" ? summaryStyle : componentIdentifier == "GroupSummary" ? details : selectFields}`}>
+    <div className={`${componentIdentifier == "GroupSummary" ? summaryStyle : componentIdentifier == "GroupSummary" ? details : componentIdentifier=="advancedSearch" ? advanceInput: selectFields}`}>
       <label className={styleLabel} style={{ color: "black" }}>{label}</label>
       <select className={selectAlign} {...register(targetElement)}>
         <option></option>

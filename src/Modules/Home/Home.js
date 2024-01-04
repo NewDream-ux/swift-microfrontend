@@ -7,6 +7,8 @@ const Home = () => {
   const {homeContainer} = style;
   const [tableVisible, setTableVisible] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
+  const [tabName, setTabName] = useState("");
+
   const tabTittle = {
     defaultActive: "search",
     tabData: [
@@ -18,8 +20,8 @@ const Home = () => {
 
   return (
     <div className={homeContainer}>
-      <Tab data={tabTittle} tableVisible={setTableVisible} searchedData={setSearchedData} tabIdentifier="search"/>
-      {tableVisible && <Table searchedData={searchedData} tableVisible={setTableVisible} />}
+      <Tab data={tabTittle} tableVisible={setTableVisible} searchedData={setSearchedData} tabIdentifier="search" tabNameIdentifier={setTabName}/>
+      {tableVisible && <Table searchedData={searchedData} tableVisible={setTableVisible} tabName={tabName}/>}
 
     </div>
   )
